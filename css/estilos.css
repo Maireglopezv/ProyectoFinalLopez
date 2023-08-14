@@ -1,0 +1,616 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url(../img/PLAYA1.jpg);
+  background-size: 100% 100%;
+  width: 100%; }
+
+  .navbar-brand{
+    width: 11rem;    
+}
+
+ul li {
+    font-size: 1.7rem;
+    display: inline-block;
+    text-align: center;
+    padding: 0.2rem 
+}
+
+.submenu{
+  padding: auto;
+}
+
+#img-carrito{
+    float: left;
+    width: 40%;
+    cursor: pointer;
+    border: rgb(3, 61, 61) 2px solid;
+    border-radius: 50%;
+    padding: 1%;
+    margin-left: 7%;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-color:  rgba(3, 61, 61, 0.788);
+    padding: 1%;
+    margin-top: 5.2%;
+    margin-right: 6%;
+    min-width: 20%;
+    min-height: 50%;
+    border-radius: 10% 0% 10% 0%;
+    border: rgb(3, 61, 61) 2px solid;
+    font-family: "Old Standard TT", serif;
+    box-shadow: 8px 8px 20px #010122;
+}
+
+.nav-link{
+    color:rgb(3, 61, 61);
+    font-size: 1.9rem;
+    font-weight: bold;
+    letter-spacing: 0.02rem;
+    font-family: 'Rancho', cursive;
+}
+
+.nav-link:hover{
+    color: rgb(1, 1, 34);
+}
+
+#lista-carrito{
+  display: inline-block;
+  color:rgb(1, 1, 34);
+  font-size: 0.85rem;
+  font-weight: bold;
+  background-color: rgba(140, 163, 133, 0.212);
+  border-radius: 10% 0% 10% 0%;
+  padding: 2%;
+}
+
+th{
+  width: 5rem;
+}
+
+
+#vaciar-carrito{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-family: 'Rancho', cursive;
+  color:  white;
+  text-decoration: none;
+}
+
+#vaciar-carrito:hover{
+  color: darkred;
+}
+
+
+.u-full-width{
+  text-decoration: none;
+  color: #010122;
+  font-family: 'Rancho', cursive;
+  font-size: 1.4rem;
+}
+
+.u-full-width:hover{
+  color: white;
+}
+
+.borrar-producto{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.borrar-producto:hover{
+  color:darkred;
+}
+
+footer {
+  display: flex;
+  bottom: 0;
+  background-color: rgba(140, 163, 133, 0.212);
+  margin-top: 5%; }
+  footer .footer_frase {
+    position: relative;
+    margin-left: 2%;
+    margin-top: 2.5%;
+    width: 100%;
+    font-family: "Rancho", cursive;
+    font-size: 1.5rem;
+    color: white; }
+  footer .redessociales {
+    display: flex; }
+    footer .redessociales .posicionredes {
+      padding: auto;
+      margin: 1rem;
+      text-decoration: none;
+      font-family: "Old Standard TT", serif;
+      font-size: 1.2rem;
+      color: #010122;
+      margin-top: 6%; }
+      footer .redessociales .posicionredes .twitter {
+        width: 3.5rem;
+        border-radius: 50%;
+        box-shadow: 2px 2px #010122;
+        transition: all .4s ease-in-out; }
+        footer .redessociales .posicionredes .twitter:hover {
+          transform: scale(1.2);
+          border: #033d3d 2px solid; }
+      footer .redessociales .posicionredes .facebook {
+        width: 3.5rem;
+        border-radius: 50%;
+        box-shadow: 2px 2px #010122;
+        transition: all .4s ease-in-out; }
+        footer .redessociales .posicionredes .facebook:hover {
+          transform: scale(1.2);
+          border: #033d3d 2px solid; }
+      footer .redessociales .posicionredes .instagram {
+        width: 3.5rem;
+        border-radius: 50%;
+        box-shadow: 2px 2px #010122;
+        transition: all .4s ease-in-out; }
+        footer .redessociales .posicionredes .instagram:hover {
+          transform: scale(1.2);
+          border: #033d3d 2px solid; }
+
+.main_inicio .portada {
+  display: flex;
+  width: 100%;
+  margin: 50%;
+  margin-top: 25%;
+  margin-bottom: 25%; }
+  .main_inicio .portada .portada_img {
+    opacity: 0.8;
+    width: 100%;
+    height: 45%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -50%); }
+    .main_inicio .portada .portada_img:hover {
+      opacity: 1; }
+  .main_inicio .portada .portada_frase {
+    width: 100%;
+    justify-content: center;
+    font-family: "Old Standard TT", serif;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation-duration: 4s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.main_inicio .portada_imagenes {
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
+  padding-bottom: 5%; }
+  .main_inicio .portada_imagenes .modelo_1 {
+    width: 25%;
+    height: 25%;
+    padding: 1.5%;
+    opacity: 0.8; }
+    .main_inicio .portada_imagenes .modelo_1:hover {
+      opacity: 1; }
+  .main_inicio .portada_imagenes .modelo_2 {
+    width: 25%;
+    height: 25%;
+    padding: 1.5%;
+    opacity: 0.8; }
+    .main_inicio .portada_imagenes .modelo_2:hover {
+      opacity: 1; }
+  .main_inicio .portada_imagenes .modelo_3 {
+    width: 25%;
+    height: 25%;
+    padding: 1.5%;
+    opacity: 0.8; }
+    .main_inicio .portada_imagenes .modelo_3:hover {
+      opacity: 1; }
+  .main_inicio .portada_imagenes .modelo_4 {
+    width: 25%;
+    height: 25%;
+    padding: 1.5%;
+    opacity: 0.8; }
+    .main_inicio .portada_imagenes .modelo_4:hover {
+      opacity: 1; }
+
+.main_menu h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 0.2%;
+  font-family: "Old Standard TT", serif;
+  color: #010122; }
+
+.main_menu .menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1%;
+  row-gap: 3%;
+  padding: 2%;
+  margin-top: 3%;
+  grid-template-areas: "EMPANADA CALAMARES CAMARONES COCTEL TOSTONES"
+ "FOSFORERA CATALANA PARRILLA LANGOSTA COCADA";
+  justify-items: center; }
+  .main_menu .menu .empanada {
+    grid-area: empanada; }
+  .main_menu .menu .calamares {
+    grid-area: calamares; }
+  .main_menu .menu .camarones {
+    grid-area: camarones; }
+  .main_menu .menu .coctel {
+    grid-area: coctel; }
+  .main_menu .menu .tostones {
+    grid-area: tostones; }
+  .main_menu .menu .fosforera {
+    grid-area: fosforera; }
+  .main_menu .menu .catalana {
+    grid-area: catalana; }
+  .main_menu .menu .parrilla {
+    grid-area: parrilla; }
+  .main_menu .menu .langosta {
+    grid-area: langosta; }
+  .main_menu .menu .cocada {
+    grid-area: cocada; }
+  .main_menu .menu .comida {
+    width: 100%;
+    height: 50%;
+    transition: all .4s ease-in-out;
+    transition: all 500ms ease-out;
+    box-shadow: 6px 6px 15px #010122;
+    cursor: pointer; }
+    .main_menu .menu .comida:hover {
+      transform: scale(1.1);
+      border: #033d3d 2px solid;
+      box-shadow: 6px 6px 15px #010122; }
+  .main_menu .menu h2 {
+    text-align: center;
+    padding: 2%;
+    font-family: "Rancho", cursive;
+    color: #8ca385;
+    font-size: 2rem;
+    margin-top: 2%;
+    background-color: #033d3d;
+    box-shadow: 6px 6px 15px #010122;
+    width: 100%; }
+  .main_menu .menu .descripcion {
+    font-family: "Old Standard TT", serif;
+    font-size: 100%;
+    width: auto;
+    height: auto;
+    padding: 2%;
+    line-height: 1.5rem;
+    color: white;
+    background: rgba(3, 61, 61, 0.808);
+    box-shadow: 6px 6px 15px #010122;
+    opacity: 1;
+    text-align: center; }
+    .main_menu .menu .descripcion .precio {
+      color: #010122;
+      font-family: "Old Standard TT", serif;
+      font-weight: bold;
+      background-color: #8ca385;
+      box-shadow: 6px 6px 15px #010122;
+      width: 100%;
+      padding: 0.2%;
+      margin-bottom: 1%;
+      align-content: end; }
+   
+
+
+.main_ubicacion h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 0.2%;
+  font-family: "Old Standard TT", serif;
+  color: #010122; }
+
+.main_ubicacion .mapa_formulario {
+  padding: 2%;
+  display: grid;
+  margin-top: 2%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
+  gap: 3%;
+  grid-template-areas: "contenedor_mapa contenedor_formulario"
+ "contenedor_video contenedor_video"; }
+  .main_ubicacion .mapa_formulario .contenedor_mapa {
+    grid-area: contenedor_mapa; }
+    .main_ubicacion .mapa_formulario .contenedor_mapa .mapa {
+      width: 100%;
+      height: 40rem;
+      background-image: url(../img/balsa.jpeg);
+      box-shadow: 6px 6px 6px #010122;
+      border: #033d3d 0.2rem solid; }
+  .main_ubicacion .mapa_formulario .contenedor_formulario {
+    grid-area: contenedor_formulario; }
+    .main_ubicacion .mapa_formulario .contenedor_formulario .formulario {
+      width: 100%;
+      font-family: "Old Standard TT", serif;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: left;
+      color: #010122;
+      line-height: 2rem; }
+      .main_ubicacion .mapa_formulario .contenedor_formulario .formulario legend {
+        font-size: 1.5rem; }
+        .main_ubicacion .mapa_formulario .contenedor_formulario .formulario legend:hover {
+          color: #033d3d; }
+      .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario {
+        background-color: rgba(3, 61, 61, 0.644);
+        border: #033d3d 0.2rem solid;
+        box-shadow: 6px 6px 6px #010122; }
+        .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario label {
+          padding: 0.2%;
+          margin-top: 1%;
+          margin-left: 2%;
+          color: white;
+          font-family: "Old Standard TT", serif;
+          font-size: 1.2rem; }
+        .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario input {
+          margin-left: 2%;
+          margin-right: 2%;
+          width: 96%;
+          font-family: "Rancho", cursive;
+          font-size: 1.5rem;
+          color: black;
+          background-image: url(../img/ARENA.jpg);
+          opacity: 0.7;
+          border: #010122 0.15rem solid; }
+        .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario .comentarios {
+          text-align: center; }
+        .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario textarea {
+          width: 96%;
+          color: black;
+          font-size: 1.5rem;
+          opacity: 0.7;
+          background-image: url(../img/ARENA.jpg);
+          background-size: 100% 100%;
+          border: #010122 0.15rem solid; }
+        .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario .botonera {
+          border-radius: 50%;
+          font-family: "Rancho", cursive;
+          align-items: center;
+          justify-content: center;
+          width: 15%;
+          margin-top: 2%;
+          margin-bottom: 2%;
+          margin-left: 45%; }
+          .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario .botonera:hover {
+            transform: scale(1.1);
+            border: #033d3d 2px solid;
+            box-shadow: 6px 6px 15px #010122;
+            transition: all .4s ease-in-out; }
+  .main_ubicacion .mapa_formulario .contenedor_video {
+    grid-area: contenedor_video; }
+    .main_ubicacion .mapa_formulario .contenedor_video .acceso {
+      margin-top: 2%;
+      font-family: "Old Standard TT", serif;
+      line-height: 2rem;
+      color: #010122;
+      font-size: 1.5rem;
+      text-align: center; }
+      .main_ubicacion .mapa_formulario .contenedor_video .acceso:hover {
+        color: #033d3d; }
+    .main_ubicacion .mapa_formulario .contenedor_video .video_2 {
+      width: 100%;
+      height: 20rem;
+      margin-bottom: 5%;
+      border: #033d3d 0.2rem solid;
+      box-shadow: 6px 6px 6px #010122;
+      background-image: url(../img/primera.jpeg); }
+
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: rgba(20, 202, 202, 0.13); 
+  }
+
+  .navbar-brand{
+      margin-top: 1%;
+      width: 20%; 
+  }
+  
+  .nav-link{
+      padding: 0.2%;
+      margin: 0%;
+      color:rgb(3, 61, 61);
+      font-size: 1.5rem;
+      background-color:  rgb(140, 163, 133);
+  }
+  
+
+  footer {
+    display: inline-block;
+    width: 100%; }
+    footer .footer_frase {
+      display: block;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-left: 0%; }
+    footer .redessociales {
+      display: block;
+      text-align: center;
+      margin-bottom: 3%; }
+      footer .redessociales .posicionredes .twitter {
+        width: 2.3rem; }
+      footer .redessociales .posicionredes .facebook {
+        width: 2.3rem; }
+      footer .redessociales .posicionredes .instagram {
+        width: 2.3rem; }
+  /* pal inicio */
+  .main_inicio .portada {
+    display: flex;
+    width: 100%; }
+    .main_inicio .portada .portada_img {
+      display: inline;
+      width: 100%;
+      height: 20%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      opacity: 1; }
+    .main_inicio .portada .portada_frase {
+      font-size: 2rem; }
+  .main_inicio .portada_imagenes {
+    margin-top: 2%;
+    display: inline;
+    align-content: center;
+    padding-top: 0;
+    padding-bottom: 0; }
+    .main_inicio .portada_imagenes .modelo_1 {
+      margin-top: 2%;
+      margin-bottom: 5%;
+      width: 100%;
+      opacity: 1;
+      padding: 0; }
+    .main_inicio .portada_imagenes .modelo_2 {
+      display: none; }
+    .main_inicio .portada_imagenes .modelo_3 {
+      display: none; }
+    .main_inicio .portada_imagenes .modelo_4 {
+      display: none; }
+  /* pa comer */
+  .main_menu h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1%;
+    font-family: "Old Standard TT", serif;
+    color: #010122;
+    animation: none; }
+  .main_menu .menu {
+    background-image: none;
+    background-color: rgba(140, 163, 133, 0.801);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(11, 12rem);
+    gap: 2%;
+    row-gap: 1%;
+    margin-bottom: 1%;
+    grid-template-areas: "NAV"
+ "EMPANADA"
+ "CALAMARES"
+ "CAMARONES"
+ "COCTEL"
+ "TOSTONES"
+ "FOSFORERA"
+ "CATALANA"
+ "PARRILLA"
+ "LANGOSTA"
+ "COCADA"; }
+    .main_menu .menu .comida {
+      width: 40%;
+      height: 100%;
+      float: left;
+      margin-top: 0%; }
+      .main_menu .menu .comida:hover {
+        transform: none; }
+    .main_menu .menu h2 {
+      padding: 0%;
+      display: inline;
+      font-size: 1.7rem;
+      height: 5%;
+      margin-top: 0%;
+      margin-bottom: 0%;
+      width: 60%;
+      height: 18%;
+      float: left; }
+    .main_menu .menu .descripcion {
+      margin-top: 0%;
+      padding: 3%;
+      float: right;
+      width: 60%;
+      height: 82%;
+      font-size: 1.1rem;
+      line-height: 1.4rem;
+      background: rgba(3, 61, 61, 0.808);
+      box-shadow: 6px 6px 15px #010122;
+      border: #033d3d 0.1rem solid;
+      opacity: 0.9;
+      text-align: left; }
+      .main_menu .menu .descripcion .precio {
+        color: #010122;
+        font-size: 1rem;
+        font-family: "Old Standard TT", serif;
+        background-color: #8ca385;
+        border: #033d3d 0.2rem solid;
+        box-shadow: 6px 6px 15px #010122;
+        width: 20%;
+        text-align: center;
+        float: right;
+        align-content: end; }
+ 
+  /* pa ubicar */
+  .main_ubicacion h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1%;
+    font-family: "Old Standard TT", serif;
+    color: #010122;
+    animation: none; }
+  .main_ubicacion .mapa_formulario {
+    padding: 3%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 0.15fr);
+    gap: 1%;
+    grid-template-areas: "contenedor_mapa"
+ "contenedor_formulario"
+ "contenedor_video"; }
+    .main_ubicacion .mapa_formulario .contenedor_mapa .mapa {
+      width: 100%;
+      height: 15rem; }
+    .main_ubicacion .mapa_formulario .contenedor_formulario .formulario legend {
+      text-align: center;
+      font-size: 1rem; }
+    .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario {
+      font-size: 1rem; }
+      .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario label {
+        font-size: 1rem; }
+      .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario input {
+        font-size: 1rem; }
+      .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario textarea {
+        width: 96%;
+        height: 5rem;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
+        background-image: none;
+        background-color: white;
+        font-size: 1rem; }
+      .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario .botonera {
+        width: 20%;
+        margin-left: 40%;
+        margin-bottom: 2%; }
+        .main_ubicacion .mapa_formulario .contenedor_formulario .formulario .interiorformulario .botonera .enviar {
+          font-size: 1rem; }
+    .main_ubicacion .mapa_formulario .contenedor_video {
+      height: 10rem;
+      margin-bottom: 1%; }
+      .main_ubicacion .mapa_formulario .contenedor_video .acceso {
+        text-align: center;
+        font-size: 1rem;
+        float: none; }
+      .main_ubicacion .mapa_formulario .contenedor_video .video_2 {
+        width: 100%;
+        height: 15rem; }
+    }
