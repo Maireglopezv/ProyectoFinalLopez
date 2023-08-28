@@ -110,27 +110,21 @@ function captura(){
     var telefono=document.getElementById("telefono").value;
     var comentario=document.getElementById("comentario").value;
     if (nombre=="") {
-        alert("El campo NOMBRE es obligatorio!")
         document.getElementById("nombre").focus();
     }else{
         if (apellido=="") {
-        alert("El campo APELLIDO es obligatorio! 😉");
         document.getElementById("apellido").focus();
     }else{
         if (correo=="") {
-        alert("El campo CORREO es obligatorio! 😉");
         document.getElementById("correo").focus();
     }else{
         if (telefono=="") {
-        alert("El campo TELEFONO es obligatorio! 😉");
         document.getElementById("telefono").focus();
     }
     else{
         if (comentario=="") {
-        alert("No nos has dejado tus felicitaciones, reclamos o sugerencias! 🤔");
         document.getElementById("comentario").focus();
     }else{
-        console.log("Nombre: " + nombre + " *" +" " + "Apellido: " + apellido + " *" +" " +"Correo: " + correo + " *" +" " +"Telefono: " + telefono + " *" +" " +"Comentario: " + comentario);
         document.getElementById("nombre").value="";
         document.getElementById("apellido").value="";
         document.getElementById("correo").value="";
@@ -138,10 +132,16 @@ function captura(){
         document.getElementById("comentario").value="";
         document.getElementById("nombre").focus();
     }
-}   
-}
-}
-}
-}
+    Swal.fire({
+        title:'¡Mensaje enviado!',
+        text: nombre + ', tu opinión es importante para nosotros. ¡Gracias!',
+        icon: 'success',
+        width: 450,
+        color: '#033d3d',
+        background: 'url(../img/PLAYA1.jpg)',
+      })
+}   } } } }
+
+
 
 
