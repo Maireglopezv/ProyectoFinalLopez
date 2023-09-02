@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         evt.preventDefault();
         const carritoJSON = JSON.stringify(articulosCarrito);
         localStorage.setItem('carrito', carritoJSON);
-        location.href = '/pages/compra.html';
+        location.href = './compra.html';
     });
 
 })
