@@ -76,8 +76,21 @@ ul li {
   padding: 2%;
 }
 
+
 th{
   width: 5rem;
+}
+
+#suma-total{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: 'Rancho', cursive;
+  color:rgb(1, 1, 34);
+  text-decoration: none;
+  background-color: #044747;
+  padding: 1.8%;
 }
 
 
@@ -85,14 +98,32 @@ th{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  font-family: 'Rancho', cursive;
+  font-size: 0.8rem;
+  font-family: "Old Standard TT", serif;
   color:  white;
   text-decoration: none;
+  padding: 1.5%;
+  background-color: #033d3d;
 }
 
 #vaciar-carrito:hover{
   color: darkred;
+}
+
+#finalizar-compra{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-family: "Old Standard TT", serif;
+  color:  white;
+  padding: 1.5%;
+  text-decoration: none;
+  background-color: #023636;
+}
+
+#finalizar-compra:hover{
+  color: rgb(11, 206, 44);
 }
 
 
@@ -116,6 +147,115 @@ th{
 .borrar-producto:hover{
   color:darkred;
 }
+
+.mainCompra{
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5%;
+}
+
+.interiorFormulario{
+  width: 25rem;
+  height: 30rem;
+  background-color: rgba(155, 172, 150, 0.884);
+  font-family: "Old Standard TT", serif;
+  padding: 10px;
+  margin: 10px;
+}
+
+.datosFormulario{
+  width: 23.5rem;
+  margin: 1%;
+  padding: 1.5%;
+  display: block;
+  text-align:left;
+  color: #010122;
+  font-size: 1.1rem;
+}
+
+input{
+  width: 100%;
+}
+
+textarea{
+  width: 100%;
+}
+
+.informacionPago{
+  width: 25rem;
+  height: 30rem;
+  background-color: rgba(155, 172, 150, 0.884);
+  font-family: "Old Standard TT", serif;
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.h1Pagos{
+  font-size: 1.8rem;
+  text-align: center;
+  color: rgb(1, 66, 12);
+  margin-top: 2%;
+}
+
+.imgPago{
+  width: 100%;
+  height: 360px;
+  opacity: 0.5;
+  margin-bottom: 4%;
+}
+
+
+.botonera{
+  background-color: rgb(1, 66, 12);
+  font-family: "Rancho", cursive;
+  font-size: 1.2rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 0.5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%,
+}
+
+.botonera:hover{
+  background-color: rgb(30, 210, 30);
+  border: #033d3d 1px solid;
+}
+
+.whatsapp{
+  width: 25rem;
+  height: 30rem;
+  background-color: rgba(155, 172, 150, 0.884);
+  font-family: "Old Standard TT", serif;
+  padding: 10px;
+  margin: 10px;
+}
+
+.pagoWhatsapp{
+  background-color: rgb(1, 66, 12);
+  font-family: "Rancho", cursive;
+  font-size: 1.2rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 5%;
+  margin-left: 25%;
+  text-decoration: none;
+}
+
+.pagoWhatsapp:hover{  
+  background-color: rgb(30, 210, 30);
+  border: #033d3d 1px solid;
+}
+
+
 
 footer {
   display: flex;

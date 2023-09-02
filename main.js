@@ -3,7 +3,10 @@ let articulosCarrito = [];
 const menu = document.querySelector('.menu');
 const carrito = document.querySelector('#carrito');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
+const finalizarCompra = document.querySelector('#finalizar-compra');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
+
+
 
 document.addEventListener('DOMContentLoaded', ()=>{
     if(JSON.parse(localStorage.getItem('carrito')) == null){
@@ -12,6 +15,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
         articulosCarrito = JSON.parse(localStorage.getItem('carrito'))
     }
     carritoHTML();
+
+    finalizarCompra.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        const carritoJSON = JSON.stringify(articulosCarrito);
+        localStorage.setItem('carrito', carritoJSON);
+        location.href = '/pages/compra.html';
+    });
+
 })
 
 menu.addEventListener('click', agregarProducto);
@@ -68,6 +79,9 @@ function leerDatosProducto(item){
 
 function carritoHTML(){
     limpiarCarrito();
+
+    let sumaTotal = 0;
+
     articulosCarrito.forEach(producto => {
         const fila = document.createElement('tr');
         fila.innerHTML = `
@@ -80,7 +94,11 @@ function carritoHTML(){
             </td>
         `;
         contenedorCarrito.appendChild(fila)
-    })
+
+        const subTotal = parseFloat(producto.precio) * producto.cantidad; sumaTotal += subTotal;
+    });
+    const sumaTotalElement = document.getElementById('suma-total');
+    sumaTotalElement.textContent = `Total a pagar: $ ${sumaTotal}`;
 
     sincronizarStorage();
 }
@@ -102,6 +120,7 @@ function vaciarCarrito(){
     articulosCarrito = [];
     sincronizarStorage();
 }
+
 
 function captura(){
     var nombre=document.getElementById("nombre").value;
@@ -134,30 +153,12 @@ function captura(){
     }
     Swal.fire({
         title:'¡Mensaje enviado!',
-        text: nombre + ', tu opinión es importante para nosotros. ¡Gracias!',
+        text: nombre + ', ¡Gracias por tu preferencia!',
         icon: 'success',
         width: 450,
         color: '#033d3d',
         background: 'url(../img/PLAYA1.jpg)',
       })
 }   } } } }
-
-document.addEventListener("DOMContentLoaded", function() {
-    const pageUrl = window.location.href; // Obtener la URL actual
-
-    fetch(pageUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Página no encontrada");
-            }
-            // Aquí puedes realizar otras acciones si la página sí existe
-        })
-        .catch(error => {
-            // Redirigir a la página 404
-            window.location.href = "./pages/404.html";
-        });
-});
-
-
 
 
