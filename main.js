@@ -8,22 +8,18 @@ const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 
 
 
-document.addEventListener('DOMContentLoaded', ()=>{
-    if(JSON.parse(localStorage.getItem('carrito')) == null){
-        articulosCarrito = []
-    }else {
-        articulosCarrito = JSON.parse(localStorage.getItem('carrito'))
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
     carritoHTML();
 
-    finalizarCompra.addEventListener('click', function(evt) {
+    finalizarCompra.addEventListener('click', (evt) => {
         evt.preventDefault();
         const carritoJSON = JSON.stringify(articulosCarrito);
         localStorage.setItem('carrito', carritoJSON);
         location.href = './compra.html';
     });
+});
 
-})
 
 menu.addEventListener('click', agregarProducto);
 vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
@@ -49,15 +45,14 @@ function eliminarProducto(evt){
     }
 }
 
-function leerDatosProducto(item){
-    const infoProducto = {
-        imagen: item.querySelector('.comida').src,
-        titulo: item.querySelector('.nombre').textContent,
-        precio: item.querySelector('.precio').textContent,
-        id: item.querySelector('a').getAttribute('data-id'),
-        cantidad: 1
-    }
-   console.log(infoProducto)
+function leerDatosProducto(item) {
+    const imagen = item.querySelector('.comida').src;
+    const titulo = item.querySelector('.nombre').textContent;
+    const precio = item.querySelector('.precio').textContent;
+    const id = item.querySelector('a').getAttribute('data-id');
+    const cantidad = 1;
+
+    const infoProducto = { imagen, titulo, precio, id, cantidad };
    
     if(articulosCarrito.some( item => item.id === infoProducto.id)){ 
         const productos = articulosCarrito.map( producto => {
@@ -122,43 +117,43 @@ function vaciarCarrito(){
 }
 
 
-function captura(){
-    var nombre=document.getElementById("nombre").value;
-    var apellido=document.getElementById("apellido").value;
-    var correo=document.getElementById("correo").value;
-    var telefono=document.getElementById("telefono").value;
-    var comentario=document.getElementById("comentario").value;
-    if (nombre=="") {
+function captura() {
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const correo = document.getElementById("correo").value;
+    const telefono = document.getElementById("telefono").value;
+    const comentario = document.getElementById("comentario").value;
+
+    const inputs = [
+        { campo: "nombre", valor: nombre },
+        { campo: "apellido", valor: apellido },
+        { campo: "correo", valor: correo },
+        { campo: "telefono", valor: telefono },
+        { campo: "comentario", valor: comentario }
+    ];
+
+    const campoVacio = inputs.find(input => input.valor === "");
+
+    if (campoVacio) {
+        document.getElementById(campoVacio.campo).focus();
+    } else {
+        
+        inputs.forEach(input => {
+            document.getElementById(input.campo).value = "";
+        });
+
         document.getElementById("nombre").focus();
-    }else{
-        if (apellido=="") {
-        document.getElementById("apellido").focus();
-    }else{
-        if (correo=="") {
-        document.getElementById("correo").focus();
-    }else{
-        if (telefono=="") {
-        document.getElementById("telefono").focus();
+
+        Swal.fire({
+            title: '¡Mensaje enviado!',
+            text: `${nombre}, ¡Gracias por tu preferencia!`,
+            icon: 'success',
+            width: 450,
+            color: '#033d3d',
+            background: 'url(../img/PLAYA1.jpg)',
+        });
     }
-    else{
-        if (comentario=="") {
-        document.getElementById("comentario").focus();
-    }else{
-        document.getElementById("nombre").value="";
-        document.getElementById("apellido").value="";
-        document.getElementById("correo").value="";
-        document.getElementById("telefono").value="";
-        document.getElementById("comentario").value="";
-        document.getElementById("nombre").focus();
-    }
-    Swal.fire({
-        title:'¡Mensaje enviado!',
-        text: nombre + ', ¡Gracias por tu preferencia!',
-        icon: 'success',
-        width: 450,
-        color: '#033d3d',
-        background: 'url(../img/PLAYA1.jpg)',
-      })
-}   } } } }
+}
+
 
 
