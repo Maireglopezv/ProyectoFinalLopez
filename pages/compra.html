@@ -106,7 +106,7 @@
 
         document.addEventListener('DOMContentLoaded', ()=>{
         btnPagos.addEventListener('click', ()=>{
-        fetch('/datos/pagos.json')
+        fetch('../datos/pagos.json')
             .then((respuesta)=>{
                 return respuesta.json();
             })
