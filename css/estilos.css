@@ -246,7 +246,7 @@ textarea{
   width: 100%;
   padding: 2%;
   margin-bottom: 5%;
-  margin-left: 25%;
+  margin-left: 18%;
   text-decoration: none;
 }
 
@@ -640,7 +640,71 @@ footer {
   #img-carrito{
     width: 3rem;
   }
-  
+
+  .mainCompra{
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0%;
+  }
+
+  .datosFormulario{
+    padding: 0%;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .interiorFormulario{
+    width: 100%;
+    height: 30rem;
+    padding: 0%;
+    margin: 1%;
+    
+  }
+  .h1Pagos{
+    font-size: 1.5rem;
+    margin-top: 5%;
+  }
+  input{
+    width: 100%;
+  }
+  textarea{
+    width: 100%;
+  }
+
+  .informacionPago{
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1%;
+    margin: 0%;
+  }
+
+  .botonera{
+    font-size: 0.8rem;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 0%;
+    margin-bottom: 1%;
+    float: right;
+  }
+
+  .whatsapp{
+    width: 100%;
+    padding: 0%;
+    margin: 10px;
+  }
+  .pagoWhatsapp{
+    font-size: 0.8rem;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 0%;
+    margin-bottom: 1%;
+    float: right;
+  }
 
   footer {
     display: inline-block;
@@ -813,4 +877,6 @@ footer {
       .main_ubicacion .mapa_formulario .contenedor_video .video_2 {
         width: 100%;
         height: 15rem; }
-    }
+
+  
+}
